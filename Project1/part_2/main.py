@@ -32,10 +32,11 @@ def read_data(reader, lstKeys):
     return retVal
 
 def write_csv_header(writer, dictObj):
-    header = []
-    for key in dictObj.keys():
-        header.append(key)
-    writer.writerow(header)
+    writer.writerow(dictObj.keys())
+    # header = []
+    # for key in dictObj.keys():
+    #     header.append(key)
+    # writer.writerow(header)
 
 def write_dictionaries_to_csv(writer, dictLst, lstKeys):
     data = []
@@ -58,12 +59,7 @@ def write_dictionaries_to_csv(writer, dictLst, lstKeys):
 #     write_dictionaries_to_csv(csv_w, sampleData,['tow_reason','tow_date'])
 
 # readerfilename = "mediumDataFile.csv"
-# with open(readerfilename, 'r') as f:
+# with open(readerfilename) as f:
 #     csv_r = csv.reader(f)
-#     print(read_csv_header(csv_r))
-
-readerfilename = "mediumDataFile.csv"
-with open(readerfilename) as f:
-    csv_r = csv.reader(f)
-    lst_header = read_csv_header(csv_r)
-    print(read_data(csv_r, lst_header))
+#     lst_header = read_csv_header(csv_r)
+#     print(read_data(csv_r, lst_header))
