@@ -8,4 +8,4 @@ Semester   : Spring 2020 (Freshmen Year)
 
 Course Website: https://cse.buffalo.edu/~mhertz/courses/cse115/
 
-#### All the practice code, lab activities and projects I worked on in my class are compiled here.
+#### All the UBInfinite Codes, Lab Activities, and Projects I worked on in my class are compiled here.
