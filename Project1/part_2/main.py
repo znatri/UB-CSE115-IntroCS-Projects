@@ -40,15 +40,18 @@ def write_csv_header(writer, dictObj):
 
 def write_dictionaries_to_csv(writer, dictLst, lstKeys):
     data = []
+    # for dictObj, key in zip(dictLst, lstKeys):
     for dictObj in dictLst:
-        accumulator = []
+        record = []
         for key in lstKeys:
             if key in dictObj:
                 value = dictObj.get(key)
-                accumulator.append(value)
-        data.append(accumulator)
+                record.append(value)
+        data.append(record)
     for record in data:
         writer.writerow(record)
+
+    
 
 
 # sampleData = [{'tow_reason': 'IL', 'tow_date': '2013-06-18'}, {'tow_date': '2014-09-25', 'tow_reason': 'GA'}]
