@@ -143,3 +143,49 @@
 
 # print(csv_sum("ubinf.csv"))
 
+# # JSON (due week of Apr. 13)
+# import json
+# import urllib.request
+
+# def to_json(val):
+#     retVal = json.dumps(val)
+#     return retVal
+
+# def read_json(val):
+#     retVal = json.loads(val)
+#     return retVal
+
+# def get_y(jsonblob):
+#     dictObj = json.loads(jsonblob)
+#     pos = dictObj['x'].index(-6) # index of item where x == -6
+#     retVal = dictObj['y'][pos] # corrosponding y coord when x == -6
+#     return retVal
+
+# def get_value(jsonblob):
+#     dictObj = json.loads(jsonblob)
+#     val = dictObj.get("attack")
+#     return val
+
+# def json_average(jsonblob):
+#     lst = json.loads(jsonblob) # list of objects [{}, {}, {}, ..., {}]
+#     total = 0
+#     count = len(lst)
+#     for dictObj in lst:
+#         total += dictObj.get("velocity")
+#     val = total/count
+#     retVal = {"velocity": val}
+#     retVal = json.dumps(retVal)
+#     return retVal
+
+# def json_filter(jsonblob):
+#     lst = json.loads(jsonblob)
+#     newLst = []
+#     for dictObj in lst:
+#         velocity = dictObj.get("velocity")
+#         if velocity > 33.28:
+#             newLst.append(dictObj)
+#     newLst = json.dumps(newLst)
+#     return newLst
+
+
+
