@@ -12,12 +12,12 @@ import csv
 
 def read_csv_header(reader):
     # retVal = []
-    header = True
+    # header = True
     for record in reader:
-        if header == True:
+        # if header == True:
             # retVal = record
-            return record
-        header = False
+        return record
+        # header = False
     # return retVal
 
 def read_data(reader, lstKeys):
@@ -50,8 +50,6 @@ def write_dictionaries_to_csv(writer, dictLst, lstKeys):
         data.append(record)
     for record in data:
         writer.writerow(record)
-
-    
 
 
 # sampleData = [{'tow_reason': 'IL', 'tow_date': '2013-06-18'}, {'tow_date': '2014-09-25', 'tow_reason': 'GA'}]
