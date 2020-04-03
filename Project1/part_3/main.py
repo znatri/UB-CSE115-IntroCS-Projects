@@ -31,4 +31,3 @@ def minimize_dictionaries(dictList, keyList):
 # dl = [{'tow_date': '2020-01-20', 'tow_reason': 'AB', 'state': 'NY'},
 #        {'city': 'NYC', 'tow_reason': 'ST', 'tow_date': '2015-09-20'}]
 # print(minimize_dictionaries(dl, ['tow_reason','tow_date']))
-
