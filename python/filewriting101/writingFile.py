@@ -51,17 +51,26 @@ def computed_column(filename):
         for record in data:
             writer.writerow(record)
 
-def filter_columns(filename):
-    data = []
-    with open(filename, 'r') as f:
-        reader = csv.reader(f)
-        for record in reader:
-            newRecord = [record[0], record[1]]
-            data.append(newRecord)
-    with open("testing.csv", 'w') as f:
-        writer = csv.writer(f)
-        for record in data:
-            writer.writerow(record)
+# def filter_columns(filename):
+#     data = []
+#     with open(filename, 'r') as f:
+#         reader = csv.reader(f)
+#         for record in reader:
+#             newRecord = [record[0], record[1]]
+#             data.append(newRecord)
+#     with open("testing.csv", 'w') as f:
+#         writer = csv.writer(f)
+#         for record in data:
+#             writer.writerow(record)
+
+# def filter_columns(filename):
+#     with open(filename, 'r') as f:
+#         reader = csv.reader(f)
+#         for record in reader:
+#             lst = [record[0], record[3]]
+#             with open("testing.csv", 'w') as w:
+#                 writer = csv.writer(w)
+#                 writer.writerow(lst)
 
 def filter_rows(filename):
     data = []

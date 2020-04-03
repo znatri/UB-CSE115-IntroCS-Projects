@@ -7,7 +7,7 @@
 import json
 import urllib.request
 
-def get_data(url): # url = "https://cse.buffalo.edu/~mhertz/courses/cse115/projects/mediumFile.json"
+def get_data(url): # url = link to json file
     response = urllib.request.urlopen(url) # Gets the HTML Code
     jsonblob = response.read().decode() # Reads the HTML Code to get JSON String
     content = json.loads(jsonblob) # Converts JSON String into usable Python Data
