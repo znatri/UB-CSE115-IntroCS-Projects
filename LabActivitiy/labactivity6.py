@@ -20,4 +20,4 @@ def low_rent(lst, csvfile):
       if item[1] < 576:
         writer.writerow(item)
         
-low_rent([ ["NY", 603.0, "Cayuga County, NY"], ["AR", 410.0, "Sevier County"] ], "a.csv")
+# low_rent([ ["NY", 603.0, "Cayuga County, NY"], ["AR", 410.0, "Sevier County"] ], "a.csv")
