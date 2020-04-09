@@ -20,6 +20,7 @@ def ajax_file():
 @bottle.route('/chat')
 def send_chat():
     messages = chat.get_chat()
+    messages = json.dumps(messages)
     return messages
 
 @bottle.post('/send')
