@@ -20,7 +20,7 @@ def static():
 def javascript():
   js_file = bottle.static_file("ajax.js", root=".")
   return js_file
-
+ 
 @bottle.route('/chat')
 def get_chat():
   response = {"something" : "For Wednesday"}
