@@ -187,6 +187,8 @@
 #     newLst = json.dumps(newLst)
 #     return newLst
 
+# HTTP Requests (due week of Apr. 13)
+
 # import urllib.request
 # import json
 
