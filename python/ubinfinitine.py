@@ -187,5 +187,58 @@
 #     newLst = json.dumps(newLst)
 #     return newLst
 
+# import urllib.request
+# import json
 
+# def get_response():
+#     url = "https://fury.cse.buffalo.edu/ps-api/r/patent"
+#     data = urllib.request.urlopen(url)
+#     strin = data.read().decode()
+#     return strin
 
+# print(get_response())
+
+# def variable_get(val):
+#     url = "https://fury.cse.buffalo.edu/ps-api/r/" + val
+#     data = urllib.request.urlopen(url)
+#     content = data.read().decode()
+#     return content
+
+# print(variable_get("patent"))
+
+# def query_string():
+#     url = "https://fury.cse.buffalo.edu/ps-api/a?x=3&y=5&z=0"
+#     response = urllib.request.urlopen(url)
+#     content_string = response.read().decode()
+#     content = json.loads(content_string)
+#     retVal = content.get("answer")
+#     return retVal
+    
+# def query_dict(kv):
+#     query = "?"
+#     arguements = []
+#     for key, value in kv.items():
+#         arg = key + "=" + str(value)
+#         arguements.append(arg)
+#     for i in range(len(arguements)):
+#         if i != len(arguements) - 1:
+#             query += arguements[i] + "&"
+#         else :
+#             query += arguements[i]
+#     url = "https://fury.cse.buffalo.edu/ps-api/a" + query
+#     response = urllib.request.urlopen(url)
+#     content_string = response.read().decode()
+#     content = json.loads(content_string)
+#     retVal = content.get("answer")
+#     return retVal
+    
+# def flu_season():
+#   # https://www.flutrack.org
+#   url = "https://fury.cse.buffalo.edu/ps-api/flutrack?time=3" # list of flu tweets over past 3 days
+#   response = urllib.request.urlopen(url)
+#   content_string = response.read().decode()
+#   content = json.loads(content_string)
+#   num = len(content) # number of tweet
+#   return num
+
+# print(flu_season())

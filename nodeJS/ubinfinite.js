@@ -76,7 +76,7 @@
 //   let bru = yay.replace(/a/g, 'd');
 //   return bru;
 // }
-  
+
 // function characters(x){
 //     return x.length;
 // }
@@ -254,4 +254,37 @@
 //         y : yval
 //     }];
 //     Plotly.newPlot('plot',data);
+// }
+
+// function get_y(blob) {
+//     let data = JSON.parse(blob);
+//     for (let i in data['x']) {
+//         if (data['x'][i] == -2) {
+//             return data['y'][i];
+//         }
+//     }
+// }
+
+// function json_filter(lst){
+//     let dataLst = JSON.parse(lst);
+//     let newList = [];
+//     for (let item of dataLst){
+//         if (item["mass"] > 36.77){
+//             newList.push(item);
+//         }
+//     }
+//     return JSON.stringify(newList);
+// }
+
+// function json_average(lst){
+//     let dataLst = JSON.parse(lst);
+//     let totalSum;
+//     let count;
+//     for (let item of dataLst){
+//         totalSum += item["temperature"];
+//         count += 1;
+//     }
+//     let avg_temp = totalSum/count;
+//     let data = {"temperature": avg_temp};
+//     return JSON.stringify(data);
 // }
