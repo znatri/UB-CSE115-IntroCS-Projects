@@ -218,15 +218,9 @@
     
 # def query_dict(kv):
 #     query = "?"
-#     arguements = []
 #     for key, value in kv.items():
-#         arg = key + "=" + str(value)
-#         arguements.append(arg)
-#     for i in range(len(arguements)):
-#         if i != len(arguements) - 1:
-#             query += arguements[i] + "&"
-#         else :
-#             query += arguements[i]
+#         query += key + "=" + str(value) + "&"
+#     query = query[:-1] # remove last '&' from string
 #     url = "https://fury.cse.buffalo.edu/ps-api/a" + query
 #     response = urllib.request.urlopen(url)
 #     content_string = response.read().decode()
