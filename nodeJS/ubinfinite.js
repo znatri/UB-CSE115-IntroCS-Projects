@@ -288,3 +288,79 @@
 //     let data = {"temperature": avg_temp};
 //     return JSON.stringify(data);
 // }
+
+// Custom Sorting (due week of Apr. 20)
+
+// function sort_list(list){
+//     list.sort();
+// }
+
+// function sort_kvs(list){
+//     list.sort(sort_spin);
+// }
+
+// function sort_spin(kv1, kv2){
+//     if (kv1["spin"] < kv2["spin"]){
+//         return -1;
+//     } else if (kv1["spin"] > kv2["spin"]) {
+//         return 1;
+//     } else{
+//         return 0;
+//     }
+// }
+
+// function sort_by_length(list){
+//     list.sort(string_length);
+// }
+
+// function string_length(kv1, kv2){
+//     if (kv1.length < kv2.length){
+//         return -1;
+//     } else if (kv1.length > kv2.length) {
+//         return 1;
+//     } else{
+//         return 0;
+//     }
+// }
+
+// function sort_by_product(list){
+//     list.sort(list_multiple);
+// }
+
+// function list_multiple(kv1, kv2){
+//     let val1 = kv1[0] * kv1[2] ;
+//     let val2 = kv2[0] * kv2[2] ;
+//     if (val1 < val2){
+//         return -1;
+//     } else if (val1 > val2) {
+//         return 1;
+//     } else{
+//         return 0;
+//     }
+// }
+
+// function sort_by_average_rating(list){
+//     list.sort(compareFn);
+// }
+
+// function compareFn(kv1, kv2){
+//     let ratingsList1 = kv1.ratings;
+//     let ratingsList2 = kv2.ratings;
+//     let avgRatings1 = 0;
+//     let avgRatings2 = 0;
+//     for (let rating of ratingsList1){
+//         avgRatings1 += Number(rating);
+//     }
+//     for (let rating of ratingsList2){
+//         avgRatings2 += Number(rating);
+//     }
+//     avgRatings1 /= ratingsList1.length;
+//     avgRatings2 /= ratingsList2.length;
+//     if (avgRatings1 < avgRatings2){
+//         return -1;
+//     } else if (avgRatings1 > avgRatings2) {
+//         return 1;
+//     } else{
+//         return 0;
+//     }
+// }

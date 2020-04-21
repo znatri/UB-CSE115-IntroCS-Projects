@@ -238,3 +238,17 @@
 #   return num
 
 # print(flu_season())
+
+
+# Custom Sorting (due week of Apr. 20)
+
+# def sort_by_average_rating(moviesList):
+#     moviesList.sort(key=ratings)
+    
+# def ratings(movie):
+#     ratingsList = movie.get("ratings")
+#     count = 0
+#     for rating in ratingsList:
+#         count += rating
+#     avgRating = count / len(ratingsList)
+#     return avgRating
