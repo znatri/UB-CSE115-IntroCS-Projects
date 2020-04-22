@@ -1,10 +1,6 @@
-# CSE115LLR
-# Project 1: Module 1
-# Made by Hardik Goel
-# Date: March 6, 2020
-# Module 1 due date: March 13, 2020
-
-# data = data_file.data
+###############
+# PART 1 Code #
+###############
 
 def get_matches(lst_data, str_key, str_val):
     lst_dict = [] # empty list to store dict
@@ -52,3 +48,4 @@ def count_by_day(lst_data):
     return lst_day_count
 
 # print(count_by_day(data))
+
