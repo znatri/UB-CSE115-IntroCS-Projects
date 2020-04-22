@@ -20,13 +20,14 @@ def list_descriptions(lst_data):
     
 # print(list_descriptions(data))
 
-def count_by_month(lst_data):
+def count_by_month(lst_data, tow_description):
     raw_data = [] # stores all  months (raw data)
     lst_months_count = [] # stores no. of cars towed every month in chronological order (final output)
     for i in lst_data: # iterates over every dictionary to capture towdate, extracts month of tow from string and append to the raw data list
-        val = i.get('tow_date') # captures date as a string
-        month = int(val[5]+val[6]) # extracts month from the string
-        raw_data.append(month) # appends month to list
+        if i.get('tow_description') == tow_description:
+            val = i.get('tow_date') # captures date as a string
+            month = int(val[5]+val[6]) # extracts month from the string
+            raw_data.append(month) # appends month to list
     for i in range(1, 13): # starts from january till december (1 through 12), also 0 is not a month 13 is not included (Endpoint)
         val = raw_data.count(i) # captures no. of tow in every month by counting no. of months
         lst_months_count.append(val) # appends no. of tow every monnth to a list in chronological order
