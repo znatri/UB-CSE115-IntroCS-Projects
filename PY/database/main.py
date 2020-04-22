@@ -27,7 +27,7 @@ seq1 = cur.execute("SELECT * FROM movies") # It's a tuple not a list
 seq2 = cur.execute("SELECT title FROM movies")
 # Command_3: SELECT * FROM table_name WHERE constraint
 def moviesInYear(cur, year):
-    r = cur.execute(f'SELECT * FROM movies WHERE year > {year}')
+    r = cur.execute('SELECT * FROM movies WHERE year > (?)', (year))
     return r
 seq3 = moviesInYear(cur, 2000)
 

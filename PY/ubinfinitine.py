@@ -252,3 +252,6 @@
 #         count += rating
 #     avgRating = count / len(ratingsList)
 #     return avgRating
+
+# Databases (due week of Apr. 27)
+# Implemented in Database folder
