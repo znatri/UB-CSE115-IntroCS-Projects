@@ -1,4 +1,5 @@
 import csv
+import json
 import urllib.request
 
 ###############
@@ -68,7 +69,7 @@ def minimize_dictionaries(dictList, keyList):
     for dictObj in dictList:
         newDict = {}
         for key in keyList:
-            newDict[key] = dictObj.get(key)
+            newDict[key] = dictObj.get(key, 'District A')
         newList.append(newDict)
     return newList
         
