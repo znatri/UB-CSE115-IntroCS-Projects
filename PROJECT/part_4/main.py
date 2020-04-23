@@ -4,11 +4,6 @@
 # Date Started: April 22, 2020
 # Module 4 due date: May 1, 2020
 
-####### Note #########
-# I modified count_by_month() to make it work with line_plot by adding one more parameter tow_description
-# I couldn't find any other way if any
-# Never the less the code works fine
-
 import bottle
 import json
 import cache
@@ -16,22 +11,21 @@ import backend
 
 @bottle.route('/')
 def load_html():
-    return bottle.static_file("index.html", root="client/")
+    return bottle.static_file("index.html", root=".")
 
-@bottle.route('/ajax.js')
-def load_ajax():
-    print("Retrieveing AJAX File")
-    return bottle.static_file("ajax.js", root="client/")
+def readCSV():
+    data = cache.read_cache("cached_data.csv")
+    return data
 
 @bottle.route('/script.js')
 def load_js():
     print("Retrieveing SCRIPT File")
-    return bottle.static_file("script.js", root="client/")
+    return bottle.static_file("script.js", root=".")
 
 @bottle.route('/scatter_plot')
 # tows on each day of the month
 def tows_by_day():
-    data = cache.read_cache("cached_data.csv")
+    data = readCSV()
     y_val = backend.count_by_day(data) # no. of tows on each day 
     x_val = [] # holds all dates corrosponding to no. of tows (y_val)
     for i in range(1, 32):
@@ -44,9 +38,9 @@ def tows_by_day():
     return json_blob
 
 @bottle.route('/pie_chart')
-# police districts were responsible for tows
+# police districts responsible for tows
 def district_data():
-    data = cache.read_cache("cached_data.csv")
+    data = readCSV()
     districtCount = {}
     for i in data: # retrieves dictionaries
         if i.get('police_district') not in districtCount: # checks if tow_description in dict exists in our list
@@ -59,11 +53,12 @@ def district_data():
 @bottle.route('/line_plot')
 # cars were towed and how those reasons change
 def tow_by_description():
-    data = cache.read_cache("cached_data.csv")
+    data = readCSV()
     tow_description = backend.list_descriptions(data)
     json_data = {}
     for item in tow_description:
-       json_data[item] = backend.count_by_month(data, item)
+        sorted_data = backend.get_matches(data, 'tow_description', item)
+        json_data[item] = backend.count_by_month(sorted_data)
     json_blob = json.dumps(json_data)
     return json_blob
 

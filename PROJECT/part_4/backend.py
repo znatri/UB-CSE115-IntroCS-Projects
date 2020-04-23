@@ -2,51 +2,50 @@
 # PART 1 Code #
 ###############
 
-def get_matches(lst_data, str_key, str_val):
-    lst_dict = [] # empty list to store dict
-    for i in lst_data: # loop to get each dict from sample data
-        if i.get(str_key) == str_val:  # get func to call equivalent value for key and compare it to our val
-            lst_dict.append(i) # if key and val match append the dict to lst
-    return lst_dict
+def get_matches(list_data, key, val):
+    list_dict = []
+    for i in list_data: 
+        if i.get(key) == val:  
+            list_dict.append(i) 
+    return list_dict
 
-# print(get_matches(data,'police_district','District A'))
+# print(get_matches(data, 'tow_description', 'ILLEGAL'))
 
-def list_descriptions(lst_data):
-    lst_str = [] # empty list to hold strings
-    for i in lst_data: # retrieves dictionaries
-        if i.get('tow_description') not in lst_str: # checks if tow_description in dict exists in our list
-            lst_str.append(i.get('tow_description'))
-    return lst_str
+def list_descriptions(list_data):
+    list_str = []
+    for i in list_data: 
+        if i.get('tow_description') not in list_str:
+            list_str.append(i.get('tow_description'))
+    return list_str
     
 # print(list_descriptions(data))
 
-def count_by_month(lst_data, tow_description):
-    raw_data = [] # stores all  months (raw data)
-    lst_months_count = [] # stores no. of cars towed every month in chronological order (final output)
-    for i in lst_data: # iterates over every dictionary to capture towdate, extracts month of tow from string and append to the raw data list
-        if i.get('tow_description') == tow_description:
-            val = i.get('tow_date') # captures date as a string
-            month = int(val[5]+val[6]) # extracts month from the string
-            raw_data.append(month) # appends month to list
-    for i in range(1, 13): # starts from january till december (1 through 12), also 0 is not a month 13 is not included (Endpoint)
-        val = raw_data.count(i) # captures no. of tow in every month by counting no. of months
-        lst_months_count.append(val) # appends no. of tow every monnth to a list in chronological order
-    return lst_months_count
+def count_by_month(list_data):
+    raw_data = [] 
+    list_months_count = [] 
+    for i in list_data: 
+        val = i.get('tow_date')
+        month = int(val[5]+val[6])
+        raw_data.append(month)
+    for i in range(1, 13): 
+        val = raw_data.count(i) 
+        list_months_count.append(val) 
+    return list_months_count
     
 
 # print(count_by_month(data))
 
-def count_by_day(lst_data):
-    raw_data = [] # stores all dates
-    lst_day_count = [] # counts all tows on particular dates and appends chornologically from 1 to 31   
-    for i in lst_data: # iterates over every dictionary to capture towdate
-        val = i.get('tow_date') # captures date as a string
-        date = int(val[8]+val[9]) # extracts day from the string
-        raw_data.append(date) # appends day to list
-    for i in range(1, 32): # starts from 1 till 31
-        val = raw_data.count(i) # captures no. of tow on each day
-        lst_day_count.append(val) # appends no. of tow every day to a list in chronological order
-    return lst_day_count
+def count_by_day(list_data):
+    raw_data = [] 
+    list_day_count = [] 
+    for i in list_data: 
+        val = i.get('tow_date')
+        date = int(val[8]+val[9])
+        raw_data.append(date) 
+    for i in range(1, 32):
+        val = raw_data.count(i)
+        list_day_count.append(val)
+    return list_day_count
 
 # print(count_by_day(data))
 

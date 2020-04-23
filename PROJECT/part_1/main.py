@@ -4,7 +4,8 @@
 # Date: March 6, 2020
 # Module 1 due date: March 13, 2020
 
-# data = data_file.data
+import data_file
+data = data_file.data
 
 def get_matches(lst_data, str_key, str_val):
     lst_dict = [] # empty list to store dict
@@ -13,7 +14,7 @@ def get_matches(lst_data, str_key, str_val):
             lst_dict.append(i) # if key and val match append the dict to lst
     return lst_dict
 
-# print(get_matches(data,'police_district','District A'))
+print(get_matches(data,'police_district','District A'))
 
 def list_descriptions(lst_data):
     lst_str = [] # empty list to hold strings
