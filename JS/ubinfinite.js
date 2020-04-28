@@ -345,7 +345,7 @@
 
 // function compareFn(kv1, kv2){
 //     let ratingsList1 = kv1.ratings;
-//     let ratingsList2 = kv2.ratings;
+//     let ratingsList2 = kv2.ratings;3
 //     let avgRatings1 = 0;
 //     let avgRatings2 = 0;
 //     for (let rating of ratingsList1){
@@ -356,11 +356,11 @@
 //     }
 //     avgRatings1 /= ratingsList1.length;
 //     avgRatings2 /= ratingsList2.length;
-//     if (avgRatings1 < avgRatings2){
-//         return -1;
-//     } else if (avgRatings1 > avgRatings2) {
-//         return 1;
-//     } else{
-//         return 0;
-//     }
+    // if (avgRatings1 < avgRatings2){
+    //     return -1;
+    // } else if (avgRatings1 > avgRatings2) {
+    //     return 1;
+    // } else{
+    //     return 0;
+    // }
 // }

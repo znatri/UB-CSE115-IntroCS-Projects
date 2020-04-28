@@ -31,9 +31,9 @@ def moviesInYear(cur, year):
     return r
 seq3 = moviesInYear(cur, 2000)
 
-# for entry in seq3:
-#     print(entry)
-#     print(entry[0] + "\t" + str(entry[1]))
+for entry in seq3:
+    print(entry)
+    print(entry[0] + "\t" + str(entry[1]))
 
 # Save changes by commiting
 conn.commit()
