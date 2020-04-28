@@ -19,7 +19,7 @@ def readCSV():
 
 @bottle.route('/script.js')
 def load_js():
-    print("Retrieveing SCRIPT File")
+    print("Sharing JavsScript File...")
     return bottle.static_file("script.js", root=".")
 
 @bottle.route('/scatter_plot')
@@ -35,6 +35,7 @@ def tows_by_day():
       'y': y_val,
     }
     json_blob = json.dumps(json_data)
+    print("\nSharing # Tows by Day...")
     return json_blob
 
 @bottle.route('/pie_chart')
@@ -48,6 +49,7 @@ def district_data():
         else:
             districtCount[i.get('police_district')] += 1
     json_blob = json.dumps(districtCount)
+    print("\nSharing % Tows by District...")
     return json_blob
 
 @bottle.route('/line_plot')
@@ -60,6 +62,7 @@ def tow_by_description():
         sorted_data = backend.get_matches(data, 'tow_description', item)
         json_data[item] = backend.count_by_month(sorted_data)
     json_blob = json.dumps(json_data)
+    print("\nSharing # Tow Description by Month...")
     return json_blob
 
 
