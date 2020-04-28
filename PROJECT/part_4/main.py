@@ -26,14 +26,7 @@ def load_js():
 # tows on each day of the month
 def tows_by_day():
     data = readCSV()
-    y_val = backend.count_by_day(data) # no. of tows on each day 
-    x_val = [] # holds all dates corrosponding to no. of tows (y_val)
-    for i in range(1, 32):
-      x_val.append(i)
-    json_data = {
-      'x': x_val,
-      'y': y_val,
-    }
+    json_data = backend.count_by_day(data) # no. of tows on each day 
     json_blob = json.dumps(json_data)
     print("\nSharing # Tows by Day...")
     return json_blob
