@@ -8,6 +8,16 @@ import bottle
 import json
 import cache
 import backend
+import os.path
+
+def load_data( ):
+  csv_file = 'cached_data.csv'
+  if not os.path.isfile(csv_file):
+    query_str = "?$limit=10000"
+    url = "https://data.buffalony.gov/resource/5c88-nfii.json" + query_str
+    data = cache.get_data(url)
+    data = cache.minimize_dictionaries(data, ['tow_date', 'tow_description', 'police_district'])
+    cache.write_cache(data, csv_file)
 
 @bottle.route('/')
 def load_html():
@@ -57,18 +67,6 @@ def tow_by_description():
     json_blob = json.dumps(json_data)
     print("\nSharing # Tow Description by Month...")
     return json_blob
-
-
-import os.path
-
-def load_data( ):
-  csv_file = 'cached_data.csv'
-  if not os.path.isfile(csv_file):
-    query_str = "?$limit=10000"
-    url = "https://data.buffalony.gov/resource/5c88-nfii.json" + query_str
-    data = cache.get_data(url)
-    data = cache.minimize_dictionaries(data, ['tow_date', 'tow_description', 'police_district'])
-    cache.write_cache(data, csv_file)
 
 load_data()
 bottle.run(host="0.0.0.0", port=8080, debug=True)
