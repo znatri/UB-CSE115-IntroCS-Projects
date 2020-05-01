@@ -1,5 +1,6 @@
 # CSE115 Project 1 (For Educational Purposes Only)
 ## Spring 2020 edition
+### Plagirism of this code can cause violation of Academic Integrity. You will solely be responsible for it.
 In this project you will be shown how to incrementally build a small web application.  The application will be complete with a JavaScript visualization in the front end of the application, and a Python-based web server back end that provides cleaned and filtered data to the front end.
 
 This project involves a significant amount of work.  The project is divided into four stages.  You'll need time to develop your code, ask questions, etc., so keep up to date to finish on time.
