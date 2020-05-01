@@ -47,10 +47,11 @@ def district_data():
     data = readCSV()
     districtCount = {}
     for i in data: # retrieves dictionaries
-        if i.get('police_district') not in districtCount: # checks if tow_description in dict exists in our list
-            districtCount[i.get('police_district')] = 1
+        district = i.get('police_district')
+        if district not in districtCount: # checks if tow_description in dict exists in our list
+            districtCount[district] = 1
         else:
-            districtCount[i.get('police_district')] += 1
+            districtCount[district] += 1
     json_blob = json.dumps(districtCount)
     print("\nSharing % Tows by District...")
     return json_blob
