@@ -2,7 +2,7 @@
 
 Course Name: CSE115LLRA Computer Science I:220110202
 
-Instructor : Matthew Hertz  
+Instructor : Prof. Hertz, Matthew  
 
 Semester   : Spring 2020 (Freshmen Year)
 
