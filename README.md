@@ -1,29 +1,40 @@
-# CSE115-CodeLibrary
+# UB CSE115 Introduction to Computer Science Project
 
-Course Name: CSE115LLRA Computer Science I:220110202
+This repository contains a collection of projects completed as part of the University at Buffalo CSE115 - Introduction to Computer Science course. The projects are designed to help students learn and practice the fundamental concepts of computer programming, problem-solving, and software development using Java.
 
-Instructor : Prof. Hertz, Matthew  
+## Repository Structure
 
-Semester   : Spring 2020 (Freshmen Year)
+The repository is organized into separate folders for each project:
 
-Course Website: https://cse.buffalo.edu/~mhertz/courses/cse115/
+- `project1`: Introduction to Java programming and basic problem-solving techniques
+- `project2`: Object-oriented programming and design patterns
+- `project3`: Graphical user interface (GUI) development using Java Swing
+- `project4`: Event-driven programming and simple game development
 
-#### All the practice code, lab activities and projects I worked on in my class are compiled here.
+## Getting Started
 
-# License
+### Prerequisites
 
-This is licensed under the MIT license. See the LICENSE file for details. Under no circumstances is use of code for plagiarism permitted by the owner of this repository. Failure to heed this advice may increase the severity of any resultant action taken by concerned authorities.
+- Java Development Kit (JDK) version 8 or later
+- Java Integrated Development Environment (IDE) such as Eclipse, IntelliJ IDEA, or NetBeans
 
-# Outro
+### Running the Projects
 
-Due to the academic nature of this content, anyone who might be affected by this content or need it's removal/editing may contact me directly to suggest the same. I hope that this repository is helpful as a learning/reference guide and to gain an understanding of the practical applications of some intro concepts in computer science.
+1. Clone the repository:
+```bat
+git clone https://github.com/znatri/ub-cse115-2020.git
+```
+2. Import the desired project into your Java IDE.
+3. Compile and run the project from your IDE.
 
-# Author
+## Contributing
 
-Hardik Goel
+This repository is for educational purposes and is not actively maintained. However, if you have any suggestions, issues, or improvements, feel free to open an issue or submit a pull request.
 
-![alt tag](https://raw.githubusercontent.com/docker/dockercraft/master/docs/img/landscape.png)
+## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-[![Run on Repl.it](https://repl.it/badge/github/znatri/CSE115-CodeLibrary)](https://repl.it/github/znatri/CSE115-CodeLibrary)
+## Acknowledgments
 
+The projects were developed as part of the CSE115 - Introduction to Computer Science course at the University at Buffalo.
